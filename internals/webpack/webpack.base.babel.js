@@ -14,9 +14,19 @@ module.exports = (options) => ({
 	module: {
 		loaders: [
 			{
-				test: /\.js$/, // Transform all .js files required somewhere with Babel
-				loader: 'babel-loader',
-				exclude: /node_modules/,
+				test: /\.jsx?$/, // Transform all .js files required somewhere with Babel
+          		loader: 'babel-loader',
+          		// loader: process.env.NODE_ENV !== 'production' ? 'react-hot-loader!babel-loader' : 'react-loader!babel-loader',
+				exclude: function(file){
+					if(/\/node_modules\//.test(file)){
+						if(!/\/material-ui-components\//.test(file)){
+							return true;
+						}
+						else{
+							console.log(file);
+						}
+					}
+				},
 				query: options.babelQuery,
 			}, {
 				test: /\.css$/,

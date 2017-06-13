@@ -1,2 +1,3 @@
-import TestGroupReducer from 'modules/TestGroup/reducer.js';
-export default { TestGroup: TestGroupReducer };
+import * as reducers from 'modules/Redux/';
+
+export default reducers;

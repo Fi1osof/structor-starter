@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
-import Snackbar from '../snackbar/';
+import Snackbar from 'modules/Templates/components/Snackbar';
 
 export default class Informer extends Snackbar {
 

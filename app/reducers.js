@@ -1,3 +1,6 @@
-import * as reducers from 'modules/Redux/';
+export {default} from 'modules/Redux/';
+// import * as reducers from 'modules/Redux/';
 
-export default reducers;
+// console.log('reducers', reducers);
+
+// export default reducers;

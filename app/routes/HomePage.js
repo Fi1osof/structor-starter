@@ -4,20 +4,32 @@
  *
  */
 
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { Link } from 'react-router';
-
-class HomePage extends Component { // eslint-disable-line react/prefer-stateless-function
+class HomePage extends Component {
+  // eslint-disable-line react/prefer-stateless-function
 
   render() {
     return (
       <div>
-        <h3 style={{ textAlign: 'center' }}><span>New Starter Application Home Page</span></h3>
-        <h3 style={{ textAlign: 'center' }}><Link to="/second"> <span>Go to Second Page</span> </Link></h3>
-        <h3 style={{ textAlign: 'center' }}></h3>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "1em"
+          }}
+        >
+          <div>
+            <h3 style={{ padding: "1em", textAlign: "center" }}>
+              <span>Click on me and start creating a new cool component.</span>
+            </h3>
+          </div>
+        </div>
+
       </div>
-      ); // eslint-disable-line
+    ); // eslint-disable-line
   }
 }
 

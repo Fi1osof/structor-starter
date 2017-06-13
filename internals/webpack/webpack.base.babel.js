@@ -5,6 +5,12 @@
 const path = require('path');
 const webpack = require('webpack');
 
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+var ExtractTextPluginMainPlugin = new ExtractTextPlugin({
+  filename: 'css/main.css'
+});
+
 module.exports = (options) => ({
 	entry: options.entry,
 	output: Object.assign({ // Compile into js/build.js
@@ -49,7 +55,13 @@ module.exports = (options) => ({
 			}, {
 				test: /\.(mp4|webm)$/,
 				loader: 'url-loader?limit=10000',
-			}],
+			},{
+	          test: new RegExp('\.(le|se|sa)ss$'),
+	          loader: ExtractTextPluginMainPlugin.extract({
+	            fallback: "style-loader",
+	            use: "css-loader!autoprefixer-loader?browsers=last 2 versions!less-loader"
+	          })
+	        }],
 	},
 	plugins: options.plugins.concat([
 		new webpack.ProvidePlugin({
@@ -66,6 +78,7 @@ module.exports = (options) => ({
 			},
 		}),
 		new webpack.NamedModulesPlugin(),
+      	ExtractTextPluginMainPlugin,
 	]),
 	resolve: {
 		modules: ['app', 'node_modules'],

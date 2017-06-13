@@ -5,7 +5,8 @@ import ReactDOM   from 'react-dom';
 
 import { createStyleSheet } from 'jss-theme-reactor';
 import customPropTypes from 'material-ui/utils/customPropTypes';
-import Layout from 'material-ui/Grid';
+import { LayoutContainer, LayoutItem } from "modules/MUI";
+
 import { LabelRadio, RadioGroup } from 'material-ui/Radio';
 import Paper from 'material-ui/Paper';
 import { FormLabel } from 'material-ui/Form';
@@ -16,7 +17,7 @@ import { FormLabel } from 'material-ui/Form';
 // import AppBar from './appbar/';
 
 // import ProfileDialogsAuth from './dialogs/auth';
-// import Informer from './informer';
+import {Informer} from 'modules/Templates';
 
 // import DevTools from './devtools';
 
@@ -200,9 +201,19 @@ class MainGrid extends React.Component {
     };
 
 
-    return <div>wefewf
-             
-    </div>;
+    return <LayoutContainer gutter={0} id="main-layout">
+      <LayoutItem xs={12}>
+
+          {this.props.children} 
+
+      </LayoutItem>
+
+      <Informer
+        message={this.props.informerMessage}
+        documentActions={this.props.documentActions}
+      />  
+
+    </LayoutContainer>;
   }
 }
 

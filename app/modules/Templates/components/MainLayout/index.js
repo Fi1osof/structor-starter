@@ -8,7 +8,6 @@ import React, { Component } from "react";
 
 import PropTypes from "prop-types";
 
-import { LayoutContainer, LayoutItem } from "modules/MUI";
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import createMuiTheme from 'material-ui/styles/theme';
 import createPalette from 'material-ui/styles/palette';
@@ -53,19 +52,10 @@ class MainLayout extends Component {
     return (
         <MuiThemeProvider theme={customStyles}>
 
-          <LayoutContainer gutter={0} id="main-layout">
-            <LayoutItem xs={12}>
-
-              <MainGrid
-
-                // store={this.state.store}
-              >
-                {this.props.children}
-              </MainGrid>
-
-            </LayoutItem>
-
-          </LayoutContainer>
+          <MainGrid
+          >
+            {this.props.children}
+          </MainGrid>
 
       </MuiThemeProvider>
     );

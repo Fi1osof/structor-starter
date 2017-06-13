@@ -1,5 +1,5 @@
 import React from "react";
-import Page6 from "./Page6";
+import HomePage from "./HomePage";
 import Page203 from "./Page203";
 
 class App extends React.Component {
@@ -15,12 +15,12 @@ class App extends React.Component {
 export default {
   path: "/",
   component: App,
-  indexRoute: { component: Page6 },
+  indexRoute: { component: HomePage },
   childRoutes: [
     {
       path: "/home",
       name: "/home",
-      component: Page6
+      component: HomePage
     },
     {
       path: "/templates/main-layout",
@@ -30,7 +30,7 @@ export default {
     {
       path: "*",
       name: "notfound",
-      component: Page6
+      component: HomePage
     }
   ]
 };

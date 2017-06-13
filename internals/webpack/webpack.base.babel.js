@@ -22,15 +22,16 @@ module.exports = (options) => ({
 			{
 				test: /\.jsx?$/, // Transform all .js files required somewhere with Babel
           		loader: 'babel-loader',
-          		// loader: process.env.NODE_ENV !== 'production' ? 'react-hot-loader!babel-loader' : 'react-loader!babel-loader',
 				exclude: function(file){
 					if(/\/node_modules\//.test(file)){
-						if(!/\/material-ui-components\//.test(file)){
-							return true;
+						if(
+							/\/material-ui-components\//.test(file)
+							|| /\/structor-templates\//.test(file)
+						){
+							return;
 						}
-						else{
-							console.log(file);
-						}
+
+						return true;
 					}
 				},
 				query: options.babelQuery,

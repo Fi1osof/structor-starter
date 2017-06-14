@@ -67,7 +67,7 @@ module.exports = (options) => ({
 	plugins: options.plugins.concat([
 		new webpack.ProvidePlugin({
 			// make fetch available
-			fetch: 'exports?self.fetch!whatwg-fetch',
+			fetch: 'exports-loader?self.fetch!whatwg-fetch',
 		}),
 
 		// Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`

@@ -6,6 +6,8 @@
 
 import React, { Component } from "react";
 
+import { MainLayout, Auth } from "modules/Templates";
+
 class HomePage extends Component {
   // eslint-disable-line react/prefer-stateless-function
 
@@ -13,20 +15,7 @@ class HomePage extends Component {
     return (
       <div>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            padding: "1em"
-          }}
-        >
-          <div>
-            <h3 style={{ padding: "1em", textAlign: "center" }}>
-              <span>Click on me and start creating a new cool component.</span>
-            </h3>
-          </div>
-        </div>
+        <MainLayout><Auth /></MainLayout>
 
       </div>
     ); // eslint-disable-line

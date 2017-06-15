@@ -86,7 +86,7 @@
             "open": true,
             "step": 1,
             "showRegForm": true,
-            "allowPasswordRecovery": true
+            "allowPasswordRecovery": false
           }
         }
       ]

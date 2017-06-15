@@ -27,6 +27,7 @@ module.exports = (options) => ({
 						if(
 							/\/material-ui-components\//.test(file)
 							|| /\/structor-templates\//.test(file)
+							|| /\/react-cms-data-view\//.test(file)
 						){
 							return;
 						}

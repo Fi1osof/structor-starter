@@ -3,3 +3,4 @@ node_modules
 /.structor
 /.structor-sandbox
 /material-ui-components
+/react-cms-data-view

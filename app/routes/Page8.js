@@ -1,23 +1,25 @@
 /**
  *
- * HomePage
+ * Page8
  *
  */
 
 import React, { Component } from "react";
 
-class HomePage extends Component {
+import { Menu } from "modules/Templates";
+
+class Page8 extends Component {
   // eslint-disable-line react/prefer-stateless-function
 
   render() {
     return (
       <div>
 
-        <div />
+        <Menu />
 
       </div>
     ); // eslint-disable-line
   }
 }
 
-export default HomePage;
+export default Page8;

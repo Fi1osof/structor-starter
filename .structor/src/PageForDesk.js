@@ -174,34 +174,34 @@ class PageForDesk extends Component {
       }
     }
     return (
-      <div
-        id="pageContainer"
-        style={{padding: '0.1px'}}
-        className={isEditModeOn ? "structor_unselectable" : ""}
-        onMouseDown={this.handleMouseDown}
-        onContextMenu={this.handleContextMenu}
-      >
         
-        <TemplatesApp >
-          {this.elementTree}
-        </TemplatesApp>
+      <TemplatesApp >
+        <div
+          id="pageContainer"
+          style={{padding: '0.1px'}}
+          className={isEditModeOn ? "structor_unselectable" : ""}
+          onMouseDown={this.handleMouseDown}
+          onContextMenu={this.handleContextMenu}
+        >
+            {this.elementTree}
 
-        {boundaryOverlays}
-        {isEditModeOn ?
-          <MouseOverOverlay
-            context={this.pageContext}
-            selectedKeys={selectedKeys}
-            bSize="1px"
-          />
-          : null
-        }
-        {isEditModeOn &&
-          <MouseMenuOverlay
-            context={this.pageContext}
-            selectedKeys={selectedKeys}
-          />
-        }
-      </div>
+          {boundaryOverlays}
+          {isEditModeOn ?
+            <MouseOverOverlay
+              context={this.pageContext}
+              selectedKeys={selectedKeys}
+              bSize="1px"
+            />
+            : null
+          }
+          {isEditModeOn &&
+            <MouseMenuOverlay
+              context={this.pageContext}
+              selectedKeys={selectedKeys}
+            />
+          }
+        </div>
+      </TemplatesApp>
     );
   }
 

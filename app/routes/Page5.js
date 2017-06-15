@@ -7,6 +7,7 @@
 import React, { Component } from "react";
 
 import { Auth } from "modules/Templates";
+import { Button } from "modules/MUI";
 
 class Page5 extends Component {
   // eslint-disable-line react/prefer-stateless-function
@@ -20,7 +21,9 @@ class Page5 extends Component {
           step={1}
           showRegForm={true}
           allowPasswordRecovery={true}
-        />
+        >
+          <Button raised={true}><span>Button</span></Button>
+        </Auth>
 
       </div>
     ); // eslint-disable-line

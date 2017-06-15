@@ -13,7 +13,22 @@ class HomePage extends Component {
     return (
       <div>
 
-        <div />
+        <div>
+          <div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                height: "100px",
+                alignItems: "center",
+                backgroundColor: "#fcecd7",
+                borderRadius: "4px"
+              }}
+            >
+              <span>Empty div</span>
+            </div>
+          </div>
+        </div>
 
       </div>
     ); // eslint-disable-line

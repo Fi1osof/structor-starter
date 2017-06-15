@@ -6,7 +6,7 @@
 
 import React, { Component } from "react";
 
-import { MainLayout } from "modules/Templates";
+import { MainLayout, Snackbar } from "modules/Templates";
 
 class Page203 extends Component {
   // eslint-disable-line react/prefer-stateless-function
@@ -15,7 +15,7 @@ class Page203 extends Component {
     return (
       <div>
 
-        <MainLayout />
+        <MainLayout><Snackbar open={true} message="rg ergergerg" /></MainLayout>
 
       </div>
     ); // eslint-disable-line

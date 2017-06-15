@@ -50,7 +50,18 @@
           "type": "MainLayout",
           "variant": "default",
           "props": {},
-          "children": [],
+          "children": [
+            {
+              "type": "Snackbar",
+              "variant": "default",
+              "children": [],
+              "namespace": "Templates",
+              "props": {
+                "open": true,
+                "message": "wefwefwe"
+              }
+            }
+          ],
           "namespace": "Templates"
         }
       ]
@@ -86,7 +97,7 @@
             "open": true,
             "step": 1,
             "showRegForm": true,
-            "allowPasswordRecovery": false
+            "allowPasswordRecovery": true
           }
         }
       ]

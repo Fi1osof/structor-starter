@@ -1,0 +1,9 @@
+[
+  {
+    "type": "Test1",
+    "variant": "default",
+    "props": {},
+    "children": [],
+    "namespace": "Test"
+  }
+]

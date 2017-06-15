@@ -1,6 +1,5 @@
 node_modules
 /build
-/.structor
 /.structor-sandbox
 /material-ui-components
 /react-cms-data-view

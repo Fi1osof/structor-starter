@@ -1,0 +1,61 @@
+{
+  "pages": [
+    {
+      "pageName": "HomePage",
+      "pagePath": "/home",
+      "children": [
+        {
+          "type": "div",
+          "variant": "default",
+          "props": {},
+          "children": [],
+          "namespace": "HTML"
+        }
+      ]
+    },
+    {
+      "pageName": "Page203",
+      "pagePath": "/templates/main-layout",
+      "children": [
+        {
+          "type": "MainLayout",
+          "variant": "default",
+          "props": {},
+          "children": [],
+          "namespace": "Templates"
+        }
+      ]
+    },
+    {
+      "pageName": "Page5",
+      "pagePath": "/templates/auth",
+      "children": [
+        {
+          "type": "Auth",
+          "variant": "default",
+          "children": [],
+          "namespace": "Templates",
+          "props": {
+            "open": true,
+            "step": 1,
+            "showRegForm": true,
+            "allowPasswordRecovery": true
+          }
+        }
+      ]
+    },
+    {
+      "pageName": "Page8",
+      "pagePath": "/templates/menu",
+      "children": [
+        {
+          "type": "Menu",
+          "variant": "default",
+          "props": {},
+          "children": [],
+          "namespace": "Templates"
+        }
+      ]
+    }
+  ]
+}

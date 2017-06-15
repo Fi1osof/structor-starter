@@ -126,13 +126,11 @@ class <%= componentName %> extends Component { // eslint-disable-line react/pref
 <% } %>
     render(){
         return (
-            <<%= 'div' + (_.isEmpty(model.props) ? '' : ' ' + processProps(model.props)) %>>
-                <% if(model.children && model.children.length > 0) {
-                    _.forEach(model.children, function(child) { %>
-                        <%= processChild(child) %>
-                    <% });
-                } %>
-            </<%= 'div' %>>
+            <% if(model.children && model.children.length > 0) {
+                _.forEach(model.children, function(child) { %>
+                    <%= processChild(child) %>
+                <% });
+            } %>
         ); // eslint-disable-line
     }
 }

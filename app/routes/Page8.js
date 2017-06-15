@@ -12,13 +12,7 @@ class Page8 extends Component {
   // eslint-disable-line react/prefer-stateless-function
 
   render() {
-    return (
-      <div>
-
-        <Menu />
-
-      </div>
-    ); // eslint-disable-line
+    return <Menu />; // eslint-disable-line
   }
 }
 

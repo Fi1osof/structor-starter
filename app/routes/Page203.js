@@ -12,13 +12,7 @@ class Page203 extends Component {
   // eslint-disable-line react/prefer-stateless-function
 
   render() {
-    return (
-      <div>
-
-        <MainLayout><Snackbar open={true} message="rg ergergerg" /></MainLayout>
-
-      </div>
-    ); // eslint-disable-line
+    return <MainLayout><Snackbar open={true} message="wefwefwe" /></MainLayout>; // eslint-disable-line
   }
 }
 

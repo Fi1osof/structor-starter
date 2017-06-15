@@ -2,10 +2,10 @@ import React from "react";
 
 import { App as TemplatesApp } from "modules/Templates";
 
-import Page8 from "./Page8";
 import HomePage from "./HomePage";
-import Page5 from "./Page5";
 import Page203 from "./Page203";
+import Page5 from "./Page5";
+import Page8 from "./Page8";
 
 class App extends React.Component {
   render() {
@@ -20,22 +20,12 @@ class App extends React.Component {
 export default {
   path: "/",
   component: App,
-  indexRoute: { component: Page8 },
+  indexRoute: { component: HomePage },
   childRoutes: [
-    {
-      path: "/templates/menu",
-      name: "/templates/menu",
-      component: Page8
-    },
     {
       path: "/home",
       name: "/home",
       component: HomePage
-    },
-    {
-      path: "/templates/auth",
-      name: "/templates/auth",
-      component: Page5
     },
     {
       path: "/templates/main-layout",
@@ -43,9 +33,19 @@ export default {
       component: Page203
     },
     {
+      path: "/templates/auth",
+      name: "/templates/auth",
+      component: Page5
+    },
+    {
+      path: "/templates/menu",
+      name: "/templates/menu",
+      component: Page8
+    },
+    {
       path: "*",
       name: "notfound",
-      component: Page8
+      component: HomePage
     }
   ]
 };

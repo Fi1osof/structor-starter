@@ -14,18 +14,14 @@ class Page5 extends Component {
 
   render() {
     return (
-      <div>
-
-        <Auth
-          open={true}
-          step={1}
-          showRegForm={true}
-          allowPasswordRecovery={true}
-        >
-          <Button raised={true}><span>Button</span></Button>
-        </Auth>
-
-      </div>
+      <Auth
+        open={true}
+        step={1}
+        showRegForm={true}
+        allowPasswordRecovery={true}
+      >
+        <Button raised={true}><span>Button</span></Button>
+      </Auth>
     ); // eslint-disable-line
   }
 }

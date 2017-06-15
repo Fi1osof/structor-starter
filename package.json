@@ -170,7 +170,7 @@
     "redux-saga": "0.12.0",
     "reselect": "2.5.4",
     "structor": "^2.3.2",
-    "structor-templates": "^1.0.0",
+    "structor-templates": "^1.1.1",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {

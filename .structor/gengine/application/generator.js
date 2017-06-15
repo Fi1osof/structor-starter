@@ -27,8 +27,6 @@ var templateNames = ['page', 'indexRoutes', 'indexApplication', 'store'];
 
 function process(currentDir, dataObject) {
 
-	alert('Generator');
-
 	var templateDatas = {};
 	var templateReaders = [];
 

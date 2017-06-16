@@ -6,13 +6,13 @@
 
 import React, { Component } from "react";
 
-import { MainLayout, Snackbar } from "modules/Templates";
+import { MainLayout } from "modules/Matryoshki";
 
 class Page203 extends Component {
   // eslint-disable-line react/prefer-stateless-function
 
   render() {
-    return <MainLayout><Snackbar open={true} message="wefwefwe" /></MainLayout>; // eslint-disable-line
+    return <MainLayout />; // eslint-disable-line
   }
 }
 

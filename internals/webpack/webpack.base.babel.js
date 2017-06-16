@@ -28,6 +28,7 @@ module.exports = (options) => ({
 							/\/material-ui-components\//.test(file)
 							|| /\/structor-templates\//.test(file)
 							|| /\/react-cms-data-view\//.test(file)
+							// || /\/moment\//.test(file)
 						){
 							return;
 						}
@@ -81,6 +82,7 @@ module.exports = (options) => ({
 		}),
 		new webpack.NamedModulesPlugin(),
       	ExtractTextPluginMainPlugin,
+      	// new webpack.IgnorePlugin(/\.\/locale$/),
 	]),
 	resolve: {
 		modules: ['app', 'node_modules'],

@@ -1,36 +1,17 @@
 {
   "pages": [
     {
-      "pageName": "HomePage",
-      "pagePath": "/home",
+      "pageName": "Page49",
+      "pagePath": "/",
       "children": [
         {
-          "type": "div",
+          "type": "MainLayout",
           "variant": "default",
-          "props": {},
-          "children": [
-            {
-              "type": "div",
-              "variant": "default",
-              "props": {
-                "style": {
-                  "display": "flex",
-                  "justifyContent": "center",
-                  "height": "100px",
-                  "alignItems": "center",
-                  "backgroundColor": "#fcecd7",
-                  "borderRadius": "4px"
-                }
-              },
-              "children": [
-                {
-                  "type": "span",
-                  "text": "Empty div",
-                  "props": {}
-                }
-              ]
-            }
-          ]
+          "props": {
+            "dataView": "Orders"
+          },
+          "children": [],
+          "namespace": "Matryoshki"
         }
       ]
     },
@@ -42,19 +23,8 @@
           "type": "MainLayout",
           "variant": "default",
           "props": {},
-          "children": [
-            {
-              "type": "Snackbar",
-              "variant": "default",
-              "children": [],
-              "namespace": "Templates",
-              "props": {
-                "open": true,
-                "message": "wefwefwe"
-              }
-            }
-          ],
-          "namespace": "Templates"
+          "children": [],
+          "namespace": "Matryoshki"
         }
       ]
     },
@@ -65,31 +35,10 @@
         {
           "type": "Auth",
           "variant": "default",
-          "children": [
-            {
-              "type": "Button",
-              "variant": "default",
-              "children": [
-                {
-                  "type": "span",
-                  "variant": "default",
-                  "props": {},
-                  "children": [],
-                  "text": "Button"
-                }
-              ],
-              "namespace": "MUI",
-              "props": {
-                "raised": true
-              }
-            }
-          ],
-          "namespace": "Templates",
+          "children": [],
+          "namespace": "Matryoshki",
           "props": {
-            "open": true,
-            "step": 1,
-            "showRegForm": true,
-            "allowPasswordRecovery": true
+            "open": true
           }
         }
       ]
@@ -104,6 +53,258 @@
           "props": {},
           "children": [],
           "namespace": "Templates"
+        }
+      ]
+    },
+    {
+      "pageName": "Page9",
+      "pagePath": "/recording-sheet",
+      "children": [
+        {
+          "type": "MainLayout",
+          "variant": "default",
+          "props": {},
+          "children": [
+            {
+              "type": "div",
+              "variant": "default",
+              "props": {},
+              "children": [
+                {
+                  "type": "div",
+                  "variant": "default",
+                  "props": {
+                    "style": {
+                      "display": "flex",
+                      "justifyContent": "center",
+                      "height": "100px",
+                      "alignItems": "center",
+                      "backgroundColor": "#fcecd7",
+                      "borderRadius": "4px"
+                    }
+                  },
+                  "children": [
+                    {
+                      "type": "span",
+                      "text": "recording-sheet",
+                      "props": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "namespace": "Matryoshki"
+        }
+      ]
+    },
+    {
+      "pageName": "Page18",
+      "pagePath": "/reports",
+      "children": [
+        {
+          "type": "MainLayout",
+          "variant": "default",
+          "props": {},
+          "children": [
+            {
+              "type": "div",
+              "variant": "default",
+              "props": {},
+              "children": [
+                {
+                  "type": "div",
+                  "variant": "default",
+                  "props": {
+                    "style": {
+                      "display": "flex",
+                      "justifyContent": "center",
+                      "height": "100px",
+                      "alignItems": "center",
+                      "backgroundColor": "#fcecd7",
+                      "borderRadius": "4px"
+                    }
+                  },
+                  "children": [
+                    {
+                      "type": "span",
+                      "text": "reports",
+                      "props": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "namespace": "Matryoshki"
+        }
+      ]
+    },
+    {
+      "pageName": "Page24",
+      "pagePath": "/billing",
+      "children": [
+        {
+          "type": "MainLayout",
+          "variant": "default",
+          "props": {},
+          "children": [
+            {
+              "type": "div",
+              "variant": "default",
+              "props": {},
+              "children": [
+                {
+                  "type": "div",
+                  "variant": "default",
+                  "props": {
+                    "style": {
+                      "display": "flex",
+                      "justifyContent": "center",
+                      "height": "100px",
+                      "alignItems": "center",
+                      "backgroundColor": "#fcecd7",
+                      "borderRadius": "4px"
+                    }
+                  },
+                  "children": [
+                    {
+                      "type": "span",
+                      "text": "billing",
+                      "props": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "namespace": "Matryoshki"
+        }
+      ]
+    },
+    {
+      "pageName": "Page30",
+      "pagePath": "/canceled",
+      "children": [
+        {
+          "type": "MainLayout",
+          "variant": "default",
+          "props": {},
+          "children": [
+            {
+              "type": "div",
+              "variant": "default",
+              "props": {},
+              "children": [
+                {
+                  "type": "div",
+                  "variant": "default",
+                  "props": {
+                    "style": {
+                      "display": "flex",
+                      "justifyContent": "center",
+                      "height": "100px",
+                      "alignItems": "center",
+                      "backgroundColor": "#fcecd7",
+                      "borderRadius": "4px"
+                    }
+                  },
+                  "children": [
+                    {
+                      "type": "span",
+                      "text": "canceled",
+                      "props": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "namespace": "Matryoshki"
+        }
+      ]
+    },
+    {
+      "pageName": "Page37",
+      "pagePath": "/info",
+      "children": [
+        {
+          "type": "MainLayout",
+          "variant": "default",
+          "props": {},
+          "children": [
+            {
+              "type": "div",
+              "variant": "default",
+              "props": {},
+              "children": [
+                {
+                  "type": "div",
+                  "variant": "default",
+                  "props": {
+                    "style": {
+                      "display": "flex",
+                      "justifyContent": "center",
+                      "height": "100px",
+                      "alignItems": "center",
+                      "backgroundColor": "#fcecd7",
+                      "borderRadius": "4px"
+                    }
+                  },
+                  "children": [
+                    {
+                      "type": "span",
+                      "text": "info",
+                      "props": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "namespace": "Matryoshki"
+        }
+      ]
+    },
+    {
+      "pageName": "Page43",
+      "pagePath": "/addresses",
+      "children": [
+        {
+          "type": "MainLayout",
+          "variant": "default",
+          "props": {},
+          "children": [
+            {
+              "type": "div",
+              "variant": "default",
+              "props": {},
+              "children": [
+                {
+                  "type": "div",
+                  "variant": "default",
+                  "props": {
+                    "style": {
+                      "display": "flex",
+                      "justifyContent": "center",
+                      "height": "100px",
+                      "alignItems": "center",
+                      "backgroundColor": "#fcecd7",
+                      "borderRadius": "4px"
+                    }
+                  },
+                  "children": [
+                    {
+                      "type": "span",
+                      "text": "addresses",
+                      "props": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "namespace": "Matryoshki"
         }
       ]
     }

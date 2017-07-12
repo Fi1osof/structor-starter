@@ -19,13 +19,16 @@ export default function configureStore(initialState = {}) {
     compose(...enhancers)
   );
 
+  /*
+    Do duplicat events
+  */
   // Make reducers hot reloadable, see http://mxs.is/googmo
-  if (module.hot) {
-    System.import("./reducers").then(reducerModule => {
-      const nextReducers = createReducers(reducerModule.default);
-      store.replaceReducer(nextReducers);
-    });
-  }
+  // if (module.hot) {
+  //   System.import("./reducers").then(reducerModule => {
+  //     const nextReducers = createReducers(reducerModule.default);
+  //     store.replaceReducer(nextReducers);
+  //   });
+  // }
 
   sagas.map(sagaMiddleware.run);
 

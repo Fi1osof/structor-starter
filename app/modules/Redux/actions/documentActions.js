@@ -1,6 +1,6 @@
 export const INITIALIZATION_REQUESTED = 'INITIALIZATION_REQUESTED';
 export const INFORMER_MESSAGE_ADDED = 'INFORMER_MESSAGE_ADDED';
-export const INFORMER_MESSAGE_SHOWED = 'INFORMER_MESSAGE_SHOWED';
+export const INFORMER_MESSAGE_REMOVED = 'INFORMER_MESSAGE_REMOVED';
 export const LOAD_DOCUMENT_REQUESTED = 'LOAD_DOCUMENT_REQUESTED';
 export const DOCUMENT_LOADED = 'DOCUMENT_LOADED';
 export const ITEM_DRAWER_CLOSED = 'ITEM_DRAWER_CLOSED';
@@ -15,17 +15,17 @@ export function InitializeDocument() {
 
 export function addInformerMessage(message) {
 
-  console.log('addInformerMessage', message);
-
   return {
     type: INFORMER_MESSAGE_ADDED,
     message,
   };
 }
 
-export function InformerMessageShowed() {
+export function removeInformerMessage(message) {
+
   return {
-    type: INFORMER_MESSAGE_SHOWED,
+    type: INFORMER_MESSAGE_REMOVED,
+    message,
   };
 }
 

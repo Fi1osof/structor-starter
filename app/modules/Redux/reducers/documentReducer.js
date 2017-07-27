@@ -1,5 +1,9 @@
 import * as env from '../actions/documentActions';
 
+import {DataStore, Dispatcher} from 'react-cms-data-view';
+
+let notifications_store = new DataStore(new Dispatcher());
+
 const initialState = {
   document: false,
   document_initialization_requested: false,
@@ -7,6 +11,7 @@ const initialState = {
   informerMessage: '',
   requested_url: '',
   item_drawer_opened: false,
+  notifications_store: notifications_store,
 };
 
 /*
@@ -25,15 +30,47 @@ export default function (state = initialState, action) {
       st.document_initialization_failed = false;
       break;
 
+
     case env.INFORMER_MESSAGE_ADDED:
 
-      st.informerMessage = action.message;
+      var dispatcher = notifications_store.getDispatcher();
+
+      var {message} = action;
+
+
+      if(typeof message != "object"){
+        message = {
+          text: message,
+        };
+      }
+
+
+      var {autohide} = message;
+
+      console.log("CREATED", message);
+
+      if(!message.handleClose){
+        message.handleClose = () => {
+          dispatcher.dispatch(notifications_store.actions['REMOVE'], message);
+        }
+      }
+
+      if(autohide && autohide > 0){
+        setTimeout(message.handleClose, autohide);
+      }
+
+      dispatcher.dispatch(notifications_store.actions['CREATE'], message);
+
       break;
 
-    case env.INFORMER_MESSAGE_SHOWED:
+    case env.INFORMER_MESSAGE_REMOVED:
 
-      st.informerMessage = "";
+      var dispatcher = notifications_store.getDispatcher();
+
+      dispatcher.dispatch(notifications_store.actions['REMOVE'], action.message);
+
       break;
+
 
     case env.LOAD_DOCUMENT_REQUESTED:
 
